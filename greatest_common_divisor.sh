@@ -2,7 +2,7 @@
 
 # 引数の長さチェック
 if [ $# -ne 2 ]; then
-  echo "Invalid number of arguments. argsLength=$#"
+  echo "Please input 2 arguments. argsLength=$#"
   exit 1
 fi 
 
@@ -12,7 +12,7 @@ ret1=$?
 expr $2 + 1 >/dev/null 2>&1
 ret2=$?
 if [ $ret1 -ge 2 ] || [ $ret2 -ge 2 ]; then
-  echo "A non-numeric value is specified in the argument. arg1=$1, arg2=$2"
+  echo "Please input numeric arguments. arg1=$1, arg2=$2"
   exit 1
   fi
 
