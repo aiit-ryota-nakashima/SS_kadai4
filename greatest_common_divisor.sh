@@ -11,10 +11,10 @@ expr $1 + 1 >/dev/null 2>&1
 ret1=$?
 expr $2 + 1 >/dev/null 2>&1
 ret2=$?
-if [ $ret1 -ge 2 ] || [ $ret2 -ge 2 ]; then
-  echo "Please input numeric arguments. arg1=$1, arg2=$2"
+if [ $ret1 -ge 2 ] || [ $ret2 -ge 2 ] || [ $1 -le 0 ] || [ $2 -le 0 ]; then
+  echo "Please input natural number arguments. arg1=$1, arg2=$2"
   exit 1
-  fi
+fi
 
 # a>bの条件になるように引数を調整する。
 if [ $1 -lt $2 ]; then
