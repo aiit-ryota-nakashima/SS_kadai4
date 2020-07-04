@@ -1,5 +1,7 @@
 #!/bin/bash
 
+tmp=/tmp/$$
+
 # テスト1(第一引数>第二引数)
 echo "8817, 3315" > $tmp-success1
 echo "result: 221" >> $tmp-success1
